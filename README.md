@@ -238,3 +238,9 @@ newspulse/
 2. **Digest articles excluded from clustering** : Articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster.
 
 ---
+
+## Video Walkthrough
+
+Watch the project walkthrough here:
+
+🔗 [Video](https://youtu.be/GugPZIagG5I)
