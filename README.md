@@ -234,7 +234,7 @@ newspulse/
 
 ## Assumptions Made
 
-1. **Minimum cluster size = 2** — singleton clusters (single articles with no related coverage) are stored in the database but excluded from the timeline. A single article doesn't constitute a "topic cluster"
-2. **Digest articles excluded from clustering** — articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster.
+1. **Minimum cluster size = 2** : Singleton clusters (single articles with no related coverage) are stored in the database but excluded from the timeline. A single article doesn't constitute a "topic cluster"
+2. **Digest articles excluded from clustering** : Articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster.
 
 ---
