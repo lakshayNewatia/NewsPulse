@@ -4,6 +4,7 @@ A full-stack system that pulls live articles from four major news RSS feeds, aut
 
 - **Frontend:** [https://news-pulse-woad.vercel.app/](https://news-pulse-woad.vercel.app/)
 - **Backend API:** [https://newspulse-jmpd.onrender.com](https://newspulse-jmpd.onrender.com)
+- **[Video Walkthrough]**(https://youtu.be/GugPZIagG5I)
 
 ---
 
@@ -237,10 +238,5 @@ newspulse/
 1. **Minimum cluster size = 2** : Singleton clusters (single articles with no related coverage) are stored in the database but excluded from the timeline. A single article doesn't constitute a "topic cluster"
 2. **Digest articles excluded from clustering** : Articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster.
 
----
 
-## Video Walkthrough
 
-Watch the project walkthrough here:
-
-🔗 [Video](https://youtu.be/GugPZIagG5I)
