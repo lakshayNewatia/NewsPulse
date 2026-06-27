@@ -1,29 +1,3 @@
-"""
-News Pulse - Topic Clustering
-TF-IDF + cosine similarity with union-find, plus recursive bisection
-for oversized clusters.
-
-Approach:
-  1. Run standard union-find clustering at threshold 0.25
-  2. Any cluster exceeding MAX_CLUSTER_SIZE (12) is re-clustered
-     internally at a higher threshold (0.35) to split it into
-     more coherent sub-clusters
-  3. Digest articles and boilerplate are excluded before vectorisation
-
-Why recursive bisection?
-  Al Jazeera covers sport, geopolitics and economics with similar
-  formal vocabulary. A "World Cup" article and a "Strait of Hormuz"
-  article share enough generic terms to exceed 0.25 similarity.
-  At 0.35 they correctly separate because the domain-specific terms
-  (FIFA, knockout, goal vs tanker, Oman, crude) diverge sharply.
-  Applying 0.35 globally would split genuine same-story clusters
-  that only share 3-4 key terms — so we only apply it surgically
-  to clusters that are clearly too large.
-
-Threshold: 0.25 (global), 0.35 (bisection of oversized clusters)
-Max cluster size before bisection: 12 articles
-"""
-
 import logging
 import os
 import re
