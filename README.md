@@ -2,8 +2,8 @@
 
 A full-stack system that pulls live articles from four major news RSS feeds, automatically groups related articles into topic clusters using TF-IDF + cosine similarity, and visualises them as an interactive timeline.
 
-- **Frontend:** [https://news-pulse-henna.vercel.app/](https://news-pulse-henna.vercel.app/)
-- **Backend API:** [https://newspulse-gw0r.onrender.com](https://newspulse-gw0r.onrender.com)
+- **Frontend:** [https://news-pulse-woad.vercel.app/](https://news-pulse-woad.vercel.app/)
+- **Backend API:** [https://newspulse-jmpd.onrender.com](https://newspulse-jmpd.onrender.com)
 
 ---
 
@@ -133,7 +133,6 @@ Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/atlas). Copy th
 
 ```bash
 cd scraper
-cp .env.example .env
 
 pip install -r requirements.txt
 
@@ -149,7 +148,6 @@ python clusterer.py   # recluster existing articles only
 
 ```bash
 cd backend
-cp .env.example .env
 
 npm install
 npm run dev     
@@ -160,7 +158,6 @@ npm start
 
 ```bash
 cd frontend
-cp .env.local.example .env.local
 
 npm install
 npm run dev     
@@ -208,7 +205,6 @@ newspulse/
 │   ├── clusterer.py     
 │   ├── pipeline.py      
 │   ├── requirements.txt
-│   └── .env.example
 ├── backend/
 │   └── src/
 │       ├── index.js         
@@ -230,8 +226,7 @@ newspulse/
 │       │   ├── SourceFilter.tsx  
 │       │   ├── RefreshButton.tsx 
 │       │   └── SourceBadge.tsx   
-│       └── lib/api.ts       
-├── render.yaml         
+│       └── lib/api.ts               
 └── README.md
 ```
 
@@ -240,6 +235,6 @@ newspulse/
 ## Assumptions Made
 
 1. **Minimum cluster size = 2** — singleton clusters (single articles with no related coverage) are stored in the database but excluded from the timeline. A single article doesn't constitute a "topic cluster"
-2. **Digest articles excluded from clustering** — articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster
+2. **Digest articles excluded from clustering** — articles whose titles indicate they are news summaries (briefings, roundups, morning newsletters) cover multiple unrelated topics. Including them causes false bridges between unrelated clusters. They remain in the database but are not assigned to any cluster.
 
 ---
